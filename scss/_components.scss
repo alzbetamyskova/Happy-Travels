@@ -1,0 +1,111 @@
+
+.header {
+    &__picture {
+        width: auto;
+        object-fit: cover;
+        
+        @media screen and (min-width: $tablet) {
+            width: auto;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 425px;
+        }
+    }
+}
+
+.main {
+    &__title {
+        color: $black;
+        font-size: $h_size;
+        font-weight: $h_weight;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
+
+    &__title:after {
+        content: "";
+        display: block;
+        width: 60px;
+        border-bottom: 3px solid $blue;
+        margin: 10px auto;
+
+        @media screen and (min-width: $desktop) {
+            margin: 10px 0;
+        }
+    }
+
+    &__descr {
+        @media screen and (min-width: $tablet) {
+            margin: 20PX 100px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin: 20px auto;
+            text-align: left;
+        }
+    }
+
+
+    &__button {
+        color: $white;
+        font-size: $button_size;
+        font-weight: $button_weight;
+        text-decoration: none;
+        border-radius: 25px;
+        padding: 10px 25px;
+    }
+
+    &--blue {
+        background-color: $blue;
+    }
+
+    &--grey {
+        background-color: $grey;
+    }
+}
+
+.secondary {
+    &__title {
+        color: $black;
+        font-weight: $h_weight;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+            padding: 0 20px;
+        }
+    }
+
+    &__descr {
+        @media screen and (min-width: $tablet) {
+            margin: 20PX 100px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin: auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+    }
+}
+
+.card {
+    font-size: $card_size;
+    font-weight: $card_weight;
+    background-color: $white;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px $shadow;
+
+    &__icon{
+        @media screen and (min-width: $tablet) {
+            padding: 10px 0;
+        }
+    }
+
+    &__descr{
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,98 @@
+body{
+    display: grid;
+    justify-content: center;
+}
+
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+    gap: 40px;
+
+    @media screen and (min-width: $desktop) {
+        gap: 80px;
+    }
+}
+
+.first {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+.header {
+    @media screen and (min-width: $desktop) {
+        grid-column: 2 / 3;
+         grid-row: 1 / 2;
+    }
+}
+
+.main {
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+
+.second {
+    display: grid;
+    gap: 15px;
+
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__right { 
+        @media screen and (min-width: $desktop) {
+            grid-template-columns: repeat(3, 1fr) 430px;
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__left { 
+        @media screen and (min-width: $desktop) {
+            grid-template-columns: 430px repeat(3, 1fr);
+            grid-template-rows: 1fr;
+        }
+    }
+}
+
+.secondary{
+    @media screen and (min-width: $tablet) {
+        grid-column: 1 / 4;
+    }
+
+    &__right { 
+        @media screen and (min-width: $desktop) {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: $desktop) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (min-width: $tablet) {
+        flex-direction: column;
+    }
+}

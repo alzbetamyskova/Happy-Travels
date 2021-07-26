@@ -1,0 +1,33 @@
+
+
+html {
+	box-sizing: border-box;
+}
+*, ::before, ::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Monserrat', sans-serif;
+	font-size: $main_size;
+	font-weight: $main_weight;
+	color: $grey;
+	background-color: $light_grey;
+	margin: 0;
+	min-width: min-content;
+}
+
+.container{
+	text-align: center;
+	margin: 60px auto;
+	max-width: 460px;
+
+	@media screen and (min-width: $tablet) {
+		max-width: max-content;
+		margin: 60px 20px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		max-width: 1040px;
+	}
+}
